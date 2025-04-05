@@ -1,5 +1,5 @@
 "use client";
-
+import { FaUser } from "react-icons/fa";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -15,7 +15,7 @@ export default function Navigation() {
           </Link>
         </div>
 
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden md:flex space-x-6 items-center">
           <NavLink href="/" label="Home" current={pathname === "/"} />
           <NavLink
             href="/properties"
@@ -26,6 +26,11 @@ export default function Navigation() {
             href="/about"
             label="About"
             current={pathname === "/about"}
+          />
+          <NavLink
+            href="/authentication"
+            label={<FaUser />}
+            current={pathname === "/authentication"}
           />
         </div>
 
@@ -58,7 +63,7 @@ function NavLink({
   current,
 }: {
   href: string;
-  label: string;
+  label: string | JSX.Element;
   current: boolean;
 }) {
   return (
