@@ -34,10 +34,12 @@ const AuthPage = () => {
                 Join thousands of satisfied customers who found their perfect
                 home with us.
               </p>
-              <p>
+              <p className="mb-4">
                 Our platform provides access to exclusive listings and
                 personalized service.
               </p>
+
+              <p>Browse to over 10,000 listings available</p>
             </div>
             <div className="mt-auto">
               <p className="text-white text-sm opacity-80">

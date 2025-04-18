@@ -153,18 +153,16 @@ export default function Home() {
               </select>
 
               <select
-                id="price-min"
-                value={priceRange.min}
-                onChange={(e) =>
-                  setPriceRange({ ...priceRange, min: e.target.value })
-                }
+                id="size-max"
+                value={size.max}
+                onChange={(e) => setSize({ ...size, max: e.target.value })}
                 className="w-full p-2 border border-gray-300 rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-blue-400"
                 size={1}
               >
-                <option value="">Min Price</option>
-                {generatePriceOptions().map((price) => (
-                  <option key={`min-${price}`} value={price}>
-                    €{price.toLocaleString()}
+                <option value="">Max Size</option>
+                {generateSizeOptions().map((sizeOption) => (
+                  <option key={`min-${sizeOption}`} value={sizeOption}>
+                    {sizeOption} m²
                   </option>
                 ))}
               </select>
